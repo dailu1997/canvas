@@ -1,0 +1,7 @@
+<!--pages/haibao/index.wxml-->
+<view class="mode">
+  <canvas id="canvas" canvas-id="canvas" style="width:570rpx;height:1072rpx;margin: 100rpx auto;">
+  
+  </canvas>
+  <view bindtap="getimg" style="position: absolute;top: 0;">保存</view>
+</view>

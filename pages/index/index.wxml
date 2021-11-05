@@ -1,0 +1,31 @@
+<!-- pages/page/cvsAutograph/cvsAutograph.wxml -->
+<view class="wrapper">
+  <view class="handBtn">
+    <view class="backBtn">返回</view>
+    <view catchtap="cleardraw" class="delBtn">清空</view>
+    <view class="delBtn" style="top:450rpx">
+    画笔颜色 
+    <view class="mode">
+      <view bindtap="clickPen" data-c="#000000" >默认(黑)</view>
+      <view bindtap="clickPen" data-c="#ff3040" >红</view>
+    </view>
+    </view>
+    <view catchtap="getimg" class="subBtn">完成</view>
+  </view>
+  <view class="handCenter">
+  <canvas class="canvas" style="height:{{cvsHeight=='100%'?cvsHeight:cvsHeight+'px'}};background-color: #fff;" 
+  id="canvas"
+  canvas-id="canvas" 
+  disable-scroll="true" 
+  bindtouchstart="canvasStart" 
+  bindtouchmove="canvasMove" 
+  bindtouchend="canvasEnd" 
+  touchcancel="canvasEnd" 
+  binderror="canvasIdErrorCallback"></canvas>
+    <cover-image class='overImg' src="{{src}}" wx:if="{{src!=''}}">
+    </cover-image>
+  </view>
+  <view class="handRight">
+    <view class="handTitle">画布</view>
+  </view>
+</view>

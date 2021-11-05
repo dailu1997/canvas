@@ -1,0 +1,5 @@
+<!--logs.wxml-->
+<canvas id="canvas" style="width:100vw;height:100vh;" canvas-id="canvas" >
+
+</canvas>
+<view bindtap="getimg">保存</view>
